@@ -16,3 +16,14 @@ describe "adding a post process" do
     expect(page).to have_content 'Errors'
   end
 end
+
+describe "updating a post process" do
+  it "edits an existing post" do
+    post = Post.create(:title => "Not So Great Day", :text => "This and this happened")
+    visit post_path(post)
+    click_on 'Edit Post'
+    fill_in 'Title', :with => 'Very Great Day'
+    click_on 'Update Post'
+    expect(page).to have_content 'Very Great Day'
+  end
+end
