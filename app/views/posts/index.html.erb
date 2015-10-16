@@ -6,7 +6,9 @@
 <% end %>
 
 <h1>All Posts</h1>
-
 <% @posts.each do |post| %>
-<%= link_to post.title, post_path(post) %><br>
+<h3><%= link_to post.title, post_path(post) %></h3>
+  <div>
+  Tags: <%= render post.tags %>
+</div>
 <% end %>
