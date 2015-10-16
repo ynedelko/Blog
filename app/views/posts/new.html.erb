@@ -1,0 +1,15 @@
+<% content_for(:title, "New Post") %>
+
+<% content_for(:nav) do %>
+<p><%= link_to "Home", posts_path %></p>
+<% end %>
+
+<h1>New Post</h1>
+
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+  <%= f.label :text %>
+  <%= f.text_area :text %><br>
+  <%= f.submit  %>
+<% end %>
