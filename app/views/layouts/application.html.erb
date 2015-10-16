@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PersonalBlog</title>
+  <title>Yelena's Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
-</body>
+<title><%= yield(:title) %></title>
+  <div class="container">
+    <body>
+      <nav>
+        <h1>Yelena's Blog</h1>
+          <%= yield(:nav) %>
+        <hr>
+      </nav>
+      <%= yield %>
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+    </body>
+  </div>
 </html>
