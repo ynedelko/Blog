@@ -27,3 +27,12 @@ describe "updating a post process" do
     expect(page).to have_content 'Very Great Day'
   end
 end
+
+describe "deleting a post process" do
+  it "deletes an existing post" do
+    post = Post.create(:title => "Not So Great Day", :text => "This and this happened")
+    visit post_path(post)
+    click_on 'Delete Post'
+    expect(page).to_not have_content 'Not So Great Day'
+  end
+end
