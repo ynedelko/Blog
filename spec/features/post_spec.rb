@@ -9,4 +9,10 @@ describe "adding a post process" do
     click_on 'Create Post'
     expect(page).to have_content 'Today was a Good Day'
   end
+
+  it "produces and error if fields are left blank" do
+    visit new_post_path
+    click_on 'Create Post'
+    expect(page).to have_content 'Errors'
+  end
 end
