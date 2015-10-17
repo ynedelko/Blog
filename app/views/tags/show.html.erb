@@ -1,7 +1,10 @@
-<h1><%= @tag.name %></h1>
-<h2>Posts including '<%= @tag.name %>' tag:</h2>
+<h1>Tag: <%= @tag.name %></h1>
+
+<h4>Posts including '<%= @tag.name %>' tag:</h4>
   <div>
-  <%= render @posts %>
+  <% @posts.each do |post| %>
+  <h3><%= link_to post.title, post_path(post) %></h3>
+  <% end %>
   </div>
 
 <hr>

@@ -8,6 +8,21 @@ class TagsController < ApplicationController
     @posts = Post.tagged_with(@tag.name)
   end
 
+  def new
+    @post = Post.find(params[:post_id])
+    @tag = @post.tags.new
+  end
+
+  def create
+   @post = Post.find(params[:post_id])
+   @tag = @post.tags.new(tag_params)
+   if @tag.save
+     redirect_to post_path(@tag.post)
+   else
+     render :new
+   end
+ end
+
   def edit
     @tag =  ActsAsTaggableOn::Tag.find(params[:id])
   end
