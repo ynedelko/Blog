@@ -1,0 +1,8 @@
+<% content_for(:title, "New Tag") %>
+
+<% content_for(:nav) do %>
+<p><%= link_to "Home", posts_path %></p>
+<% end %>
+
+<h1>New Tag</h1>
+<%= render "form" %>

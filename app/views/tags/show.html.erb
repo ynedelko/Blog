@@ -1,3 +1,8 @@
-<h1>Posts including '<%= @tag.name %>' tag:</h1>
+<h1><%= @tag.name %></h1>
+<h2>Posts including '<%= @tag.name %>' tag:</h2>
+  <div>
+  <%= render @posts %>
+  </div>
 
-<div><li><%= render @posts %></li></div>
+<hr>
+<h4><%= link_to "Edit Tag", edit_tag_path(@tag) %> | <%= link_to "Delete Tag", tag_path(@tag), {:method => "delete"} %></h4>
