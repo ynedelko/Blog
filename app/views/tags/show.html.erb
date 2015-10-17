@@ -1,3 +1,7 @@
+<% content_for(:nav) do %>
+<p><%= link_to "Home", posts_path %> | <%= link_to "Add New Post", new_post_path %> | <%= link_to "See All Tags", tags_path %> </p>
+<% end %>
+
 <h1>Tag: <%= @tag.name %></h1>
 
 <h4>Posts including '<%= @tag.name %>' tag:</h4>
