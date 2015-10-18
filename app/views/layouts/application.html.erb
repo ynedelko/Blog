@@ -10,17 +10,19 @@
 <title><%= yield(:title) %></title>
   <div class="container">
     <body>
-      <nav>
-
-        <div class="Y">
-          <%= image_tag("parachute.png") %> Yelena's Blog
-        </div>
-          <h2><%= yield(:nav) %></h2>
-        <hr>
-      </nav>
+    <nav>
+      <div class="Y">
+        <%= image_tag("parachute.png") %> Yelena's Blog
+      </div>
+        <h2><%= yield(:nav) %></h2>
+      <hr>
+    </nav>
       <%= yield %>
+    <h2>
+      <br>
       <%= flash[:alert] %>
       <%= flash[:notice] %>
+    </h2>
     </body>
   </div>
 </html>

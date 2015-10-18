@@ -25,13 +25,14 @@ class TagsController < ApplicationController
 
   def edit
     @tag =  ActsAsTaggableOn::Tag.find(params[:id])
-    @posts = Post.tagged_with(@tag.name)
+    @post = Post.tagged_with(@tag.name)
   end
 
   def update
     @post = Post.find(params[:id])
-    if @post.update(post_params)
-      redirect_to posts_path
+    @tag =  ActsAsTaggableOn::Tag.find(params[:id])
+    if @tag.update(tag_params)
+      redirect_to tag_path(@tag)
     else
       render :edit
     end
