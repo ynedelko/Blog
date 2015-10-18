@@ -1,2 +1,5 @@
 <li><%= link_to tag.name, tag_path(tag) %></li>
 this was in the act_as_taggable_on views folder in tags folder
+
+
+color scheme: http://paletton.com/#uid=33z0c0k0ylL67Qw2+h7bAgAyHn+
