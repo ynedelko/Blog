@@ -1,4 +1,4 @@
-<% content_for(:title, "@post.title") %>
+<% content_for(:title, @post.title) %>
 
 <% content_for(:nav) do %>
 <p><%= link_to "Home", posts_path %> | <%= link_to "Add New Post", new_post_path %> | <%= link_to "See All Tags", tags_path %> </p>

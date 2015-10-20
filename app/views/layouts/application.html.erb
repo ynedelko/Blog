@@ -2,7 +2,6 @@
 <html>
 <head>
   <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
-  <title>Yelena's Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,12 +9,11 @@
 <title><%= yield(:title) %></title>
   <div class="container">
     <body>
-    <nav>
-      <div class="Y">
+    <nav class="navbar navbar-inverse">
+      <div class="blog-title">
         <%= image_tag("parachute.png") %> Yelena's Blog
       </div>
         <h2><%= yield(:nav) %></h2>
-      <hr>
     </nav>
       <%= yield %>
     <h2>
