@@ -24,8 +24,8 @@ class TagsController < ApplicationController
  end
 
   def edit
-    @tag =  ActsAsTaggableOn::Tag.find(params[:id])
-    @post = Post.tagged_with(@tag.name)
+  #   @tag =  ActsAsTaggableOn::Tag.find(params[:id])
+  #   @post = Post.tagged_with(@tag.name)
   end
 
   def update

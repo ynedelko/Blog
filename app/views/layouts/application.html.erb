@@ -12,8 +12,8 @@
     <nav class="navbar navbar-inverse">
       <div class="blog-title">
         <%= image_tag("parachute.png") %> Yelena's Blog
+        <h4><%= yield(:nav) %></h4>
       </div>
-        <h2><%= yield(:nav) %></h2>
     </nav>
       <%= yield %>
     <h2>

@@ -6,6 +6,6 @@
   <%= f.label :text %>
   <%= f.text_area :text %><br>
   <%= f.label :tags_seperated_by_commas %>
-  <%= f.text_field :tag_list%><br>
+  <%= f.text_field :tag_list, value: @post.tag_list.join(",")%><br>
   <%= f.submit  %>
 <% end %>

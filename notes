@@ -3,3 +3,13 @@ this was in the act_as_taggable_on views folder in tags folder
 
 
 color scheme: http://paletton.com/#uid=33z0c0k0ylL67Qw2+h7bAgAyHn+
+
+index view for posts:
+
+<h1>All Posts</h1>
+<% @posts.each do |post| %>
+<h3><%= link_to post.title, post_path(post) %></h3>
+  <div>
+  Tags: <%= render post.tags %>
+</div>
+<% end %>
