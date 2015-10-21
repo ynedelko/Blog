@@ -9,10 +9,21 @@
 <title><%= yield(:title) %></title>
   <div class="container">
     <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar">
       <div class="blog-title">
         <%= image_tag("parachute.png") %> Yelena's Blog
         <h4><%= yield(:nav) %></h4>
+      </div>
+      <div class="user_nav">
+        <p>
+          <% if user_signed_in? %>
+            Hi <%= current_user.email %> |
+            <%= link_to "logout", destroy_user_session_path, method: :delete %>
+          <% else %>
+          <%= link_to "sign up", new_user_registration_path %> |
+          <%= link_to "login", new_user_session_path %>
+          <% end %>
+      </p>
       </div>
     </nav>
       <%= yield %>
