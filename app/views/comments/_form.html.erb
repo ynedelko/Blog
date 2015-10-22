@@ -1,0 +1,9 @@
+<%= render('layouts/errors', :object => @comment) %>
+
+<%= form_for [@post, @comment] do |f| %>
+  <%= f.label :public_name %>
+  <%= f.text_field :public_name %><br>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+  <p><%= f.submit %></p>
+<% end %>
