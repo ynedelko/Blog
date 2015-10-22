@@ -10,11 +10,9 @@
   <div class="container">
     <body>
     <nav class="navbar">
-      <div class="blog-title">
-        <%= image_tag("parachute.png") %> Yelena's Blog
+        <h1><%= image_tag("parachute.png") %> Robert, the plant.</h1>
         <h4><%= yield(:nav) %></h4>
-      </div>
-      </nav>
+    </nav>
       <div class="user_nav">
         <p>
           <% if user_signed_in? %>
