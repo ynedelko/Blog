@@ -1,0 +1,8 @@
+<% content_for(:title, "Edit Post") %>
+<% content_for(:nav) do %>
+<p><%= link_to "Home", posts_path %> | <%= link_to "Add New Post", new_post_path %> | <%= link_to "See All Tags", tags_path %> </p>
+<% end %>
+
+<h1>Edit Comment</h1>
+
+<%= render "form" %>

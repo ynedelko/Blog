@@ -8,10 +8,35 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     if @comment.save
+      flash[:notice] = "Thank you for your comment."
       redirect_to post_path(@comment.post)
     else
       render :new
     end
+  end
+
+  def edit
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+      if @comment.update(comment_params)
+        flash[:notice] = "Update successful."
+        redirect_to post_path(@post)
+      else
+        render :edit
+      end
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.destroy
+    flash[:notice] = "Your comment is deleted."
+    redirect_to post_path(@post)
   end
 
 private
