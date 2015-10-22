@@ -14,6 +14,7 @@
         <%= image_tag("parachute.png") %> Yelena's Blog
         <h4><%= yield(:nav) %></h4>
       </div>
+      </nav>
       <div class="user_nav">
         <p>
           <% if user_signed_in? %>
@@ -25,7 +26,7 @@
           <% end %>
       </p>
       </div>
-    </nav>
+
       <%= yield %>
     <h2>
       <br>

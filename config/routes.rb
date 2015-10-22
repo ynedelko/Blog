@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  devise_for :users
   root :to => 'posts#index'
 
-  resources :posts
-  resources :tags
+  devise_for :users do
+    resources :comments
+  end
 
+  resources :posts do
+    resources :comments
+  end
+
+  resources :tags
 end
