@@ -5,6 +5,7 @@ body {
   font-family: 'Muli', sans-serif;
   background-color: #ADACAB;
   color: #0C0C0C;
+  background: rgba(186, 207, 226, 0.6)
 }
 
 a {
@@ -20,9 +21,16 @@ li {
 }
 
 .navbar {
-  border-color: black;
+  border-bottom-color: #BF5F00;
   padding: 10px;
 }
 .user_nav {
   float: right;
+}
+
+.thumbnail {
+  background-color: #BACFE2;
+  border-color: #BF5F00;
+  border-left-width: medium;
+  border-bottom-width: medium;
 }
