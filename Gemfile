@@ -25,7 +25,8 @@ group :test, :development do
   gem 'launchy'
   gem 'pry'
   gem 'capybara'
-   gem 'simplecov', require: false
+  gem 'simplecov', require: false
+  gem 'factory_girl_rails'
 end
 
 group :test do
