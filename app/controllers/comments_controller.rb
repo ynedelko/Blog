@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
+    @user = current_user
     @comment = @post.comments.new(comment_params)
     if @comment.save
       flash[:notice] = "Thank you for your comment."
@@ -39,7 +40,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     flash[:notice] = "Your comment is deleted."
     redirect_to post_path(@post)
-  end
+end
 
 private
   def comment_params
