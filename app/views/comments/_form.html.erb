@@ -3,5 +3,7 @@
 <%= form_for [@post, @comment] do |f| %>
   <%= f.label :text %>
   <%= f.text_area :text %>
+  <%= f.label :public_name %>
+  <%= f.text_area :public_name %>
   <p><%= f.submit %></p>
 <% end %>

@@ -13,9 +13,14 @@
     <% if @post.comments.any? %>
       <h5><strong>Comments:</strong></h5>
       <% @post.comments.each do |comment| %>
-      <h6><%= comment.text %> by <%= @user.email %>
+      <h6><%= comment.text %> by
+        <% if current_user %>
+        <%= comment.public_name %>
+         <% else %>
+         (please log in to see author)
+         <% end %>
       <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-        <%= link_to "Delete", post_comment_path(@post, comment), {:method => "delete"}%></h6>
+      <%= link_to "Delete", post_comment_path(@post, comment), {:method => "delete"}%></h6>
       <% end %>
     <% else %>
       <h6>Please add a comment.</h6>
