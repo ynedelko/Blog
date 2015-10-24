@@ -4,12 +4,20 @@
 
 #### By _**Yelena Nedelko**_
 
+## Live App deployed on Heroku:
+* _http://yelenablog.herokuapp.com/_
+
 ## Description
 
-_As an admin I can:_
+_User can:_
 * _Add, update, delete and see a list of my posts._
 * _Add and delete a tag for a specific post._
 * _View post in order by last modified._
+* _View comments for posts._
+_Logged-in user can:_
+* _Add, edit, and delete comments._
+* _See author names for comments._
+
 
 ## Technology Used
 * _Ruby_
@@ -21,6 +29,10 @@ _As an admin I can:_
 * _Active Record_
 * _Shoulda-matchers_
 * _Acts-as-taggable-on_
+* _Devise_
+* _Factory_Girl_
+* _Simple_Cov_
+* _Rails_12Factor_
 
 ## Database Setup/ Installation
 
